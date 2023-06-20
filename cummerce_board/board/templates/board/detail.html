@@ -65,7 +65,7 @@
                 })
                 .text(function (d) { return d.text; });
         }
-        fetch("http://127.0.0.1:8000/board/api/wordcloud/1").then((resp) => {
+        fetch("http://127.0.0.1:8000/board/api/wordcloud/{{ item.id }}").then((resp) => {
             return resp.json()
         }).then(data => {
             // 워드클라우드 레이아웃 설정
